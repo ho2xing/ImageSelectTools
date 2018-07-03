@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="folder_all">所有照片</string>
+    <string name="preview">预览</string>
+    <string name="msg_no_camera">没有系统相机</string>
+    <string name="msg_no_creata_cache_flie">无法创建缓存文件，请检查应用权限</string>
+    <string name="msg_amount_limit">选择图片数量超过最大限制</string>
+    <string name="msg_anount_phone_limit">已经达到最高选择数量，此时不能使用相机、请勾选掉一张图片，再继续操作。</string>
+    
+    
+    <string name="imageselect_image_text">图片</string>
+    <string name="imageselect_complete_text">完成</string>
+    <string name="imageselect_count_text">%1$d&#047;%2$d</string>
+    <string name="imageselect_dialog_title">提示</string>
+    <string name="imageselect_dialog_content">确定删除此图片?</string>
+    <string name="imageselect_dialog_submit">确定</string>
+    <string name="imageselect_dialog_cancel">取消</string>
+    <string name="imageselect_mulitselect_complate">完成</string>
+
+</resources>
