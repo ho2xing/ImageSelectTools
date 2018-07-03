@@ -21,7 +21,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.squareup.picasso.Picasso;
+
 import com.util.core.imageselect.R;
 
 public class ImageOnlyDisplayActivity extends Activity implements OnPageChangeListener {
@@ -164,7 +164,7 @@ public class ImageOnlyDisplayActivity extends Activity implements OnPageChangeLi
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
-		Picasso.with(this).cancelTag(this);
+//		Picasso.with(this).cancelTag(this);
 		if (alertDialog != null) {
 			alertDialog.dismiss();
 		}

@@ -33,7 +33,7 @@ import android.widget.GridView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.squareup.picasso.Picasso;
+
 import com.util.core.adapter.FolderAdapter;
 import com.util.core.adapter.ImageGridAdapter;
 import com.util.core.bean.Folder;
@@ -191,12 +191,12 @@ public class MultiImageSelectorFragment extends Fragment {
 			@Override
 			public void onScrollStateChanged(AbsListView absListView, int state) {
 
-				final Picasso picasso = Picasso.with(getActivity());
-				if (state == SCROLL_STATE_IDLE || state == SCROLL_STATE_TOUCH_SCROLL) {
-					picasso.resumeTag(getActivity());
-				} else {
-					picasso.pauseTag(getActivity());
-				}
+//				final Picasso picasso = Picasso.with(getActivity());
+//				if (state == SCROLL_STATE_IDLE || state == SCROLL_STATE_TOUCH_SCROLL) {
+//					picasso.resumeTag(getActivity());
+//				} else {
+//					picasso.pauseTag(getActivity());
+//				}
 
 				if (state == SCROLL_STATE_IDLE) {
 					// 停止滑动，日期指示器消失

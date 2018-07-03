@@ -22,7 +22,8 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.squareup.picasso.Picasso;
+import com.bumptech.glide.Glide;
+
 import com.util.core.imageselect.R;
 
 public class ImageDisplayActivity extends Activity implements OnPageChangeListener {
@@ -173,7 +174,7 @@ public class ImageDisplayActivity extends Activity implements OnPageChangeListen
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
-		Picasso.with(this).cancelTag(this);
+//		Glide.with(this).cancelTag(this);
 		if (alertDialog != null) {
 			alertDialog.dismiss();
 		}

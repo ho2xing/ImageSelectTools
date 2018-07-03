@@ -9,9 +9,9 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.LinearLayout;
 
-import com.squareup.picasso.MemoryPolicy;
-import com.squareup.picasso.Picasso;
-import com.squareup.picasso.Transformation;
+import com.bumptech.glide.Glide;
+
+import com.bumptech.glide.request.RequestOptions;
 import com.util.core.imageselect.R;
 import com.util.core.photopreview.GestureImageView;
 
@@ -42,7 +42,7 @@ public class PhotoPreview extends LinearLayout implements OnClickListener {
 	 * 相片按相框的比例动态缩放
 	 * 
 	 * @param context
-	 * @param 要缩放的图片
+
 	 * @param width
 	 *            模板宽度
 	 * @param height
@@ -69,25 +69,6 @@ public class PhotoPreview extends LinearLayout implements OnClickListener {
 		return Bitmap.createScaledBitmap(bmp, newW, newH, true);
 	}
 
-	public class CropSquareTransformation implements Transformation {
-		@Override
-		public Bitmap transform(Bitmap source) {
-					
-			Log.i("ImageDisplay ", " old image size is " + source.getHeight() + "  " + source.getWidth());
-			Bitmap result = upImageSize(context, source, 480, 800);
-
-			Log.i("ImageDisplay ", " image size is " + result.getHeight() + "  " + result.getWidth());
-			if (result != source) {
-				source.recycle();
-			}
-			return result;
-		}
-
-		@Override
-		public String key() {
-			return "square()";
-		}
-	}
 
     public static boolean isUrl (String pInput) {
         if(pInput == null){
@@ -104,9 +85,12 @@ public class PhotoPreview extends LinearLayout implements OnClickListener {
 		
 		
 		Log.i("image loading path ", path);
+		Glide.with(context)
+				.load(path)
+				.apply(new RequestOptions().placeholder(R.drawable.image_select_default_error)
+						.error(R.drawable.image_select_default_error))
+				.into(ivContent);
 
-		Picasso.with(context).load(path).memoryPolicy(MemoryPolicy.NO_CACHE, MemoryPolicy.NO_STORE).noFade()
-				.transform(new CropSquareTransformation()).config(Bitmap.Config.RGB_565).into(ivContent);
 	}
 
 	@Override

@@ -13,7 +13,9 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.squareup.picasso.Picasso;
+
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.util.core.bean.Image;
 import com.util.core.imageselect.R;
 
@@ -236,12 +238,10 @@ public class ImageGridAdapter extends BaseAdapter {
 
             if(mItemSize > 0) {
                 // 显示图片
-                Picasso.with(mContext)
+                Glide.with(mContext)
                         .load(imageFile)
-                        .placeholder(R.drawable.image_select_default_error)
-                                //.error(R.drawable.image_select_default_error)
-                        .resize(mItemSize, mItemSize)
-                        .centerCrop()
+                        .apply(new RequestOptions().placeholder(R.drawable.image_select_default_error)
+                                .error(R.drawable.image_select_default_error).override(mItemSize,mItemSize).centerCrop())
                         .into(image);
             }
         }

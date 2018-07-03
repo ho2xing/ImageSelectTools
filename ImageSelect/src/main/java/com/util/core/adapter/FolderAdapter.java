@@ -14,7 +14,9 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.squareup.picasso.Picasso;
+
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.util.core.bean.Folder;
 import com.util.core.imageselect.R;
 
@@ -85,12 +87,13 @@ public class FolderAdapter extends BaseAdapter {
                 holder.size.setText(getTotalImageSize()+"张");
                 if(mFolders.size()>0){
                     Folder f = mFolders.get(0);
-                    Picasso.with(mContext)
-                            .load(new File(f.cover.path))
-                            .error(R.drawable.image_select_default_error)
-                            .resize(mImageSize, mImageSize)
-                            .centerCrop()
+                    // 显示图片
+                    Glide.with(mContext)
+                            .load(f.cover.path)
+                            .apply(new RequestOptions().placeholder(R.drawable.image_select_default_error)
+                                    .error(R.drawable.image_select_default_error).override(mImageSize,mImageSize).centerCrop())
                             .into(holder.cover);
+
                 }
             }else {
                 holder.bindData(getItem(i));
@@ -142,12 +145,12 @@ public class FolderAdapter extends BaseAdapter {
             name.setText(data.name);
             size.setText(data.images.size()+"张");
             // 显示图片
-            Picasso.with(mContext)
-                    .load(new File(data.cover.path))
-                    .placeholder(R.drawable.image_select_default_error)
-                    .resize(mImageSize, mImageSize)
-                    .centerCrop()
+            Glide.with(mContext)
+                    .load(data.cover.path)
+                    .apply(new RequestOptions().placeholder(R.drawable.image_select_default_error)
+                            .error(R.drawable.image_select_default_error).override(mImageSize,mImageSize).centerCrop())
                     .into(cover);
+
             // TODO 选择标识
         }
     }

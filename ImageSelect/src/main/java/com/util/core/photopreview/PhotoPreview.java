@@ -9,8 +9,8 @@ import android.view.View.OnClickListener;
 import android.widget.LinearLayout;
 
 
-import com.squareup.picasso.Picasso;
-import com.squareup.picasso.Transformation;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.util.core.imageselect.R;
 
 public class PhotoPreview extends LinearLayout implements OnClickListener {
@@ -41,29 +41,14 @@ public class PhotoPreview extends LinearLayout implements OnClickListener {
 		loadImage(photoModel.getOriginalPath());
 	}
 
-	public class CropSquareTransformation implements Transformation {
-		@Override
-		public Bitmap transform(Bitmap source) {
-			int size = Math.min(source.getWidth(), source.getHeight());
-			int x = (source.getWidth() - size) / 2;
-			int y = (source.getHeight() - size) / 2;
-			Bitmap result = Bitmap.createBitmap(source, x, y, size, size);
-			if (result != source) {
-				source.recycle();
-			}
-			return result;
-		}
-
-		@Override
-		public String key() {
-			return "square()";
-		}
-	}
 
 	private void loadImage(String path) {
-		Picasso.with(context).load(path).noFade().config(Bitmap.Config.RGB_565)
 
-		.into(ivContent);
+		Glide.with(context)
+				.load(path)
+				.apply(new RequestOptions().placeholder(R.drawable.image_select_default_error)
+						.error(R.drawable.image_select_default_error))
+				.into(ivContent);
 	}
 
 	@Override
