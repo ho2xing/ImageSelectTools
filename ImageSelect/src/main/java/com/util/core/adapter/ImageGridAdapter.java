@@ -224,11 +224,11 @@ public class ImageGridAdapter extends BaseAdapter {
                 indicator.setVisibility(View.VISIBLE);
                 if(mSelectedImages.contains(data)){
                     // 设置选中状态
-                    indicator.setImageResource(R.drawable.image_select_btn_selected);
+                    indicator.setImageResource(R.mipmap.image_select_btn_selected);
                     mask.setVisibility(View.VISIBLE);
                 }else{
                     // 未选择
-                    indicator.setImageResource(R.drawable.image_select_btn_unselected);
+                    indicator.setImageResource(R.mipmap.image_select_btn_unselected);
                     mask.setVisibility(View.GONE);
                 }
             }else{
@@ -240,8 +240,8 @@ public class ImageGridAdapter extends BaseAdapter {
                 // 显示图片
                 Glide.with(mContext)
                         .load(imageFile)
-                        .apply(new RequestOptions().placeholder(R.drawable.image_select_default_error)
-                                .error(R.drawable.image_select_default_error).override(mItemSize,mItemSize).centerCrop())
+                        .apply(new RequestOptions().placeholder(R.mipmap.image_select_default_error)
+                                .error(R.mipmap.image_select_default_error).override(mItemSize,mItemSize).centerCrop())
                         .into(image);
             }
         }

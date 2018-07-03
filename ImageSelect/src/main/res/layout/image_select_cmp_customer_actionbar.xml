@@ -6,12 +6,11 @@
 
     <ImageView
         android:id="@+id/btn_back"
-        android:src="@drawable/image_select_btn_back"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
+        android:src="@mipmap/image_select_btn_back"
+        android:padding="16dp"
         android:layout_centerVertical="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_width="48dp"
+        android:layout_height="48dp" />
 
     <TextView
         android:text="@string/imageselect_image_text"
@@ -21,6 +20,7 @@
         android:layout_centerVertical="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
 
     <Button
         android:id="@+id/commit"

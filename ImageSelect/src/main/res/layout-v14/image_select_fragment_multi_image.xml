@@ -45,7 +45,7 @@
             tools:text="所有图片"
             android:textSize="16sp"
             android:gravity="center_vertical"
-            android:drawableRight="@drawable/image_select_text_indicator"
+            android:drawableRight="@mipmap/image_select_text_indicator"
             android:drawablePadding="5dp"
             android:background="@null"
             android:singleLine="true"

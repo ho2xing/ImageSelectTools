@@ -90,8 +90,8 @@ public class FolderAdapter extends BaseAdapter {
                     // 显示图片
                     Glide.with(mContext)
                             .load(f.cover.path)
-                            .apply(new RequestOptions().placeholder(R.drawable.image_select_default_error)
-                                    .error(R.drawable.image_select_default_error).override(mImageSize,mImageSize).centerCrop())
+                            .apply(new RequestOptions().placeholder(R.mipmap.image_select_default_error)
+                                    .error(R.mipmap.image_select_default_error).override(mImageSize,mImageSize).centerCrop())
                             .into(holder.cover);
 
                 }
@@ -147,8 +147,8 @@ public class FolderAdapter extends BaseAdapter {
             // 显示图片
             Glide.with(mContext)
                     .load(data.cover.path)
-                    .apply(new RequestOptions().placeholder(R.drawable.image_select_default_error)
-                            .error(R.drawable.image_select_default_error).override(mImageSize,mImageSize).centerCrop())
+                    .apply(new RequestOptions().placeholder(R.mipmap.image_select_default_error)
+                            .error(R.mipmap.image_select_default_error).override(mImageSize,mImageSize).centerCrop())
                     .into(cover);
 
             // TODO 选择标识

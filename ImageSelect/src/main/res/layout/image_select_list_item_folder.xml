@@ -12,10 +12,10 @@
         android:layout_centerVertical="true"
         android:layout_marginLeft="10dp"
         android:id="@+id/cover"
-        tools:src="@drawable/image_select_btn_back"
+        tools:src="@mipmap/image_select_btn_back"
         android:layout_gravity="center_vertical"
         android:scaleType="centerInside"
-        android:src="@drawable/image_select_default_error"
+        android:src="@mipmap/image_select_default_error"
         android:layout_width="@dimen/image_select_folder_cover_size"
         android:layout_height="@dimen/image_select_folder_cover_size" />
 
@@ -56,9 +56,9 @@
         android:id="@+id/indicator"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="20dp"
-        android:src="@drawable/image_select_default_check"
+        android:src="@mipmap/image_select_default_check"
         android:layout_gravity="center_vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_width="24dp"
+        android:layout_height="24dp" />
 
 </RelativeLayout>

@@ -10,6 +10,7 @@
     
     
     <string name="imageselect_image_text">图片</string>
+    <string name="imageselect_clean_images">清除</string>
     <string name="imageselect_complete_text">完成</string>
     <string name="imageselect_count_text">%1$d&#047;%2$d</string>
     <string name="imageselect_dialog_title">提示</string>

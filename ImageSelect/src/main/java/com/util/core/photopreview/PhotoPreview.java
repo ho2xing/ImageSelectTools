@@ -46,8 +46,8 @@ public class PhotoPreview extends LinearLayout implements OnClickListener {
 
 		Glide.with(context)
 				.load(path)
-				.apply(new RequestOptions().placeholder(R.drawable.image_select_default_error)
-						.error(R.drawable.image_select_default_error))
+				.apply(new RequestOptions().placeholder(R.mipmap.image_select_default_error)
+						.error(R.mipmap.image_select_default_error))
 				.into(ivContent);
 	}
 

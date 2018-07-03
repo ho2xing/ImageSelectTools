@@ -7,12 +7,11 @@
 
     <ImageView
         android:id="@+id/btn_back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_centerVertical="true"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
-        android:src="@drawable/image_select_btn_back" />
+        android:padding="16dp"
+        android:src="@mipmap/image_select_btn_back" />
 
     <TextView
         android:id="@+id/count_text"
@@ -34,7 +33,7 @@
         android:layout_marginRight="16dp"
         android:minHeight="1dp"
         android:minWidth="1dp"
-        android:src="@drawable/image_select_del"
+        android:src="@mipmap/image_select_del"
         android:text="@string/imageselect_complete_text" />
 
 </RelativeLayout>
