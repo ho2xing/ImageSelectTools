@@ -4,8 +4,8 @@
     <string name="folder_all">すべての写真</string>
     <string name="preview">プレビュー</string>
     <string name="msg_no_camera">カメラのプログラムを発見していない</string>
-    <string name="msg_amount_limit">已经达到最高选择数量</string>
-    <string name="msg_anount_phone_limit">已经达到最高选择数量，此时不能使用相机、请勾选掉一张图片，在继续操作。</string>
+    <string name="msg_amount_limit">最高選択数に達しました。</string>
+    <string name="msg_anount_phone_limit">最高選択数に達しました。カメラは使えません。一枚の写真をチェックしてください。</string>
     <string name="imageselect_image_text">画像</string>
     <string name="imageselect_complete_text">完成</string>
     <string name="imageselect_count_text">%1$d&#047;%2$d</string>
@@ -14,5 +14,8 @@
     <string name="imageselect_dialog_submit">確定</string>
     <string name="imageselect_dialog_cancel">キャンセル</string>
     <string name="imageselect_mulitselect_complate">完成</string>
+    <string name="imageselect_clean_images">クリア</string>
+    <string name="msg_no_creata_cache_flie">キャッシュファイルを作成できませんでした。アプリケーションの権限を確認してください。</string>
+
 
 </resources>

@@ -29,5 +29,5 @@ dependencies {
     implementation "com.android.support.constraint:constraint-layout:1.0.2"
     testImplementation 'junit:junit:4.12'
     implementation project(':ImageSelect')
-    implementation 'com.yh.common:tools:1.8@aar'
+
 }

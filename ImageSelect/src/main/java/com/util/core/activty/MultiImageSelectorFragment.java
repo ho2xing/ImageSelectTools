@@ -516,7 +516,7 @@ public class MultiImageSelectorFragment extends Fragment {
 
 						Image image = new Image(path, name, dateTime);
 						String pixString = getTypeName(path.trim().toLowerCase(Locale.ENGLISH));
-						if (pixString.endsWith("png") || pixString.endsWith("jpg")) {
+						if (pixString.endsWith("png") || pixString.endsWith("jpg") || pixString.endsWith("jpeg")) {
 							if(imageIsRight(path)) {
 								images.add(image);
 							}
@@ -534,7 +534,7 @@ public class MultiImageSelectorFragment extends Fragment {
 
 								if (!mResultFolder.contains(folder)) {
 
-									if (pixString.endsWith("png") || pixString.endsWith("jpg")) {
+									if (pixString.endsWith("png") || pixString.endsWith("jpg")|| pixString.endsWith("jpeg")) {
 										List<Image> imageList = new ArrayList<>();
 										if(imageIsRight(image.path)){
 											imageList.add(image);
@@ -545,7 +545,7 @@ public class MultiImageSelectorFragment extends Fragment {
 									}
 
 								} else {
-									if (pixString.endsWith("png") || pixString.endsWith("jpg")) {
+									if (pixString.endsWith("png") || pixString.endsWith("jpg")|| pixString.endsWith("jpeg")) {
 										// 更新
 										Folder f = mResultFolder.get(mResultFolder.indexOf(folder));
 										if(imageIsRight(image.path)){

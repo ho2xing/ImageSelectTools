@@ -1,8 +1,5 @@
 package com.util.core.activty;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
@@ -22,9 +19,10 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
-
 import com.util.core.imageselect.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ImageDisplayActivity extends Activity implements OnPageChangeListener {
 
@@ -174,7 +172,6 @@ public class ImageDisplayActivity extends Activity implements OnPageChangeListen
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
-//		Glide.with(this).cancelTag(this);
 		if (alertDialog != null) {
 			alertDialog.dismiss();
 		}
@@ -201,8 +198,6 @@ public class ImageDisplayActivity extends Activity implements OnPageChangeListen
 
 				@Override
 				public void onClick(View view) {
-					
-				
 					if (resultList.size() > 0) {
 						resultList.remove(currentDispalyImageId);
 						if (currentDispalyImageId + 1 == resultList.size()) {
